@@ -1,0 +1,38 @@
+{
+    "projectName":"example",
+    "sections":[{
+        "name":"section1",
+        "weightage":15,
+        "status":"inprogress",
+        "subsections":[{
+            "weightage":20,
+            "details":["lorem ipsum","crazy brezzy"]
+        }]
+    },{
+        "name":"section2",
+        "weightage":55,
+        "status":"inprogress",
+        "subsections":[{
+            "weightage":40,
+            "details":["lorem ipsum","crazy brezzy"]
+        }]
+    },{
+        "name":"section3",
+        "weightage":30,
+        "status":"inprogress",
+        "subsections":[{
+            "weightage":40,
+            "details":["lorem ipsum","crazy brezzy"]
+        }]
+    }],
+    "assignedTo":"",
+    "reviewedBy":"",
+    "tenderSubDate":"2022/03/20",
+    "binBondValue": "2022/03/20",
+    "technicalSubmission":"2022/03/20",
+    "commercialSubmission":"2022/03/20",
+    "surveyEngineer":"",
+    "surveyReport":"https/:wwww.googlecloud.com/file"
+
+
+}
