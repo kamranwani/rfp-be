@@ -15,8 +15,6 @@ dotenv.config();
 const app = express();
 
 // ===== CORS (needed for sessions) =====
-const cors = require("cors");
-
 app.use(cors({
   origin: [
     "https://rfp-track.netlify.app",
