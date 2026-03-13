@@ -45,13 +45,13 @@ const validateWeightage = (sections = []) => {
 export const createProject = async (req, res) => {
   try {
 
-    const { projectName, rfpNumber, submissionDate, sections } = req.body;
+    const { projectName, rfpNumber, tenderSubDate, sections } = req.body;
 
-    if (!projectName || !rfpNumber || !submissionDate) {
-      return res.status(400).json({
-        message: "projectName, rfpNumber and submissionDate are required"
-      });
-    }
+if (!projectName || !rfpNumber || !tenderSubDate) {
+  return res.status(400).json({
+    message: "projectName, rfpNumber and tenderSubDate are required"
+  });
+}
 
     if (sections && sections.length > 0) {
       validateWeightage(sections);

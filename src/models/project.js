@@ -71,10 +71,10 @@ const ProjectSchema = new mongoose.Schema(
     default: Date.now
   },
 
-  submissionDate: {
-    type: Date,
-    required: true
-  },
+ tenderSubDate: {
+  type: Date,
+  required: true
+},
 
   assignedTo: {
     type: String,
