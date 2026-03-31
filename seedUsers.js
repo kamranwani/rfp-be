@@ -14,20 +14,15 @@ const seedUsers = async () => {
 
     const users = [
       {
-        email: "admin@test.com",
-        password: await bcrypt.hash("admin123", 10),
+        email: "admin",
+        password: await bcrypt.hash("admin@2026", 10),
         role: "admin",
       },
       {
-        email: "admin2@test.com",
-        password: await bcrypt.hash("admin456", 10),
-        role: "admin",
-      },
-      {
-        email: "uploader@test.com",
-        password: await bcrypt.hash("upload123", 10),
-        role: "uploader",
-      },
+        email: "muheetaltaf",
+        password: await bcrypt.hash("muheet123", 10),
+        role: "uploader", // change role if needed
+      }
     ];
 
     await User.insertMany(users);
