@@ -14,12 +14,12 @@ const seedUsers = async () => {
 
     const users = [
       {
-        email: "admin",
+        email: "admin@greenvolt.energy",
         password: await bcrypt.hash("admin@2026", 10),
         role: "admin",
       },
       {
-        email: "muheetaltaf",
+        email: "muheetaltaf@greenvolt.energy",
         password: await bcrypt.hash("muheet123", 10),
         role: "uploader", // change role if needed
       }
