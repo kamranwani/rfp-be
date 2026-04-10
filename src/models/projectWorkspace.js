@@ -8,7 +8,8 @@ const uploadSchema = new mongoose.Schema({
 
   format: String,
 
-  version: String, // ⭐ from UI
+  version: String,
+  remark:String, // ⭐ from UI
 
   uploadedBy: String,
 

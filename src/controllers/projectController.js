@@ -109,6 +109,8 @@ export const createProjectsBulk = async (req, res) => {
 };
 
 // ===== GET ALL PROJECTS =====
+import Workspace from "../models/projectWorkspace.js";
+
 export const getProjects = async (req, res) => {
   try {
 
@@ -117,7 +119,19 @@ export const getProjects = async (req, res) => {
     const pageNum = Number(page);
     const limitNum = Number(limit);
 
-    const projects = await Project.find()
+    let filter = {};
+
+    // 🔐 uploader sees only projects with workspace
+    if (req.user.role === "uploader") {
+
+  const projectIds = await Workspace.distinct("projectId");
+
+  filter = {
+    _id: { $in: projectIds }
+  };
+}
+
+    const projects = await Project.find(filter)
       .sort({ createdAt: -1 })
       .skip((pageNum - 1) * limitNum)
       .limit(limitNum);
